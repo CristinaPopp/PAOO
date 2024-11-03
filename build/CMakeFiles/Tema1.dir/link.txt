@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Tema1.dir/src/main.cpp.o CMakeFiles/Tema1.dir/src/Carte.cpp.o -o Tema1 
