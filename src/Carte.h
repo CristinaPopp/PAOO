@@ -13,6 +13,7 @@ class Carte
         int anPublicare, pagini, exemplare;
 
     public:
+        Carte() = delete;
         Carte(const string& titlu, const string& autor, int anPublicare, const string& gen, int pagini);
         Carte(const Carte& altaCarte);
         Carte(Carte&& altaCarte) noexcept;

@@ -2,6 +2,7 @@
 
 int main()
 {
+    Carte test;
 
     Carte *carte1 = new Carte("The Great Gatsby", "F. Scott Fitzgerald", 1925, "Novel", 180);
     Carte *carte2 = new Carte("1984", "George Orwell", 1949, "Dystopian", 328);
