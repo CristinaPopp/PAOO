@@ -33,14 +33,18 @@ void Carte::afiseazaInfoCarte() const
 
 Carte& Carte::operator=(const Carte& altaCarte)
 {
+    if (this == &altaCarte)
+        return *this;
+
     titlu = altaCarte.titlu;
     autor = altaCarte.autor;
     anPublicare = altaCarte.anPublicare;
     gen = altaCarte.gen;
     pagini = altaCarte.pagini;
     exemplare = altaCarte.exemplare;
-    return *this;
+    return *this; 
 }
+
 
 Carte::~Carte()
 {
