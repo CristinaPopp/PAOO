@@ -3,26 +3,29 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
+#include <memory> 
 
+using namespace std;
 
 class Carte
 {
-    private:
-        string titlu, autor, gen;
-        int anPublicare, pagini, exemplare;
+private:
+    string titlu, autor, gen;
+    int anPublicare, pagini, exemplare;
+    std::unique_ptr<std::string> descriere; 
 
-    public:
-        Carte() = delete;
-        Carte(const string& titlu, const string& autor, int anPublicare, const string& gen, int pagini);
-        Carte(const Carte& altaCarte);
-        Carte(Carte&& altaCarte) noexcept;
-        string getTitlu() const;
-        void setTitlu(const string& titlu);
-        void afiseazaInfoCarte() const;
-        Carte& operator=(const Carte& altaCarte);
-        ~Carte();
+public:
+    Carte() = delete;
+    Carte(const string& titlu, const string& autor, int anPublicare, const string& gen, int pagini);
+    Carte(const Carte& altaCarte);
+    Carte(Carte&& altaCarte) noexcept;
+    Carte& operator=(const Carte& altaCarte);
+    Carte& operator=(Carte&& altaCarte) noexcept;
+    ~Carte();
+    string getTitlu() const;
+    void setTitlu(const string& titlu);
+    void afiseazaInfoCarte() const;
 };
 
-#endif
+#endif 
 

@@ -2,8 +2,8 @@
 
 int main()
 {
-    Carte test;
 
+    Carte test("Titlu Test", "Autor Test", 2021, "Gen Test", 100);
     Carte *carte1 = new Carte("The Great Gatsby", "F. Scott Fitzgerald", 1925, "Novel", 180);
     Carte *carte2 = new Carte("1984", "George Orwell", 1949, "Dystopian", 328);
 
@@ -27,7 +27,7 @@ int main()
     Carte carte4 = std::move(*carte1);
     carte4.afiseazaInfoCarte();
 
-    //Verificam stare carte1
+    //Verificam stare carte1 (mutat)
     carte1->afiseazaInfoCarte();
 
     delete carte1;
@@ -35,3 +35,4 @@ int main()
 
     return 0;
 }
+
